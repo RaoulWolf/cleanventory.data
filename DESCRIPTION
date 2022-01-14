@@ -20,12 +20,12 @@ Depends:
     R (>= 3.5.0)
 Suggests: 
     bit64,
-    cleanventory,
     covr,
     knitr,
     rmarkdown,
     textclean,
-    tools, tinytest
+    tinytest,
+    tools
 VignetteBuilder: knitr
 URL: https://github.com/RaoulWolf/cleanventory.data
 BugReports: https://github.com/RaoulWolf/cleanventory.data/issues
