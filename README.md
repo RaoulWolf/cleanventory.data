@@ -5,39 +5,61 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/RaoulWolf/cleanventory.data/workflows/R-CMD-check/badge.svg)](https://github.com/RaoulWolf/cleanventory.data/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/RaoulWolf/cleanventory.data/branch/master/graph/badge.svg)](https://app.codecov.io/gh/RaoulWolf/cleanventory.data?branch=master)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of cleanventory.data is to …
+> A [ZeroPM](https://zeropm.eu/) R package
+
+The goal of cleanventory.data is to provide easy access to the data sets
+as created by the
+[cleanventory](https://github.com/RaoulWolf/cleanventory) package.
+
+As such, it comes with no additional dependencies.
+
+We suggest the following packages/functionalities in addition:
+[`bit64::as.integer64()`](https://cran.r-project.org/web/packages/bit64)
+to correctly handle the `tsca$cas_reg_no` column (kept as `double` for
+compatibility), and
+[`textclean::replace_non_ascii()`](https://cran.r-project.org/web/packages/textclean)
+to replace non-ASCII characters with ASCII-equivalents for the
+`ec$ec_name` , `ec$description` and `ec$echa_name` columns (kept as is
+for transparency).
+
+As of 2022-01-14, the following inventories are included:
+
+| Chemical Inventory | Name   | Version(s)            | URL                                                                  |
+|:-------------------|:-------|:----------------------|:---------------------------------------------------------------------|
+| US EPA TSCA        | `tsca` | 2021-08               | <https://www.epa.gov/tsca-inventory>                                 |
+| ECHA CLP Annex VI  | `clp`  | 9, 10, 13, 14, 15, 17 | <https://echa.europa.eu/en/information-on-chemicals/annex-vi-to-clp> |
+| ECHA EC            | `ec`   | *Unknown*             | <https://echa.europa.eu/information-on-chemicals/ec-inventory>       |
 
 ## Installation
 
-You can install the development version of cleanventory.data like so:
+You can install the development version of cleanventory.data from
+[GitHub](https://github.com/) with:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("devtools")
+remotes::install_github("RaoulWolf/cleanventory.data")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+The data sets are immediately available when loading the package.
 
 ``` r
 library(cleanventory.data)
-str(tsca)
-#> 'data.frame':    68191 obs. of  11 variables:
-#>  $ id          : int  1 2 3 4 5 6 7 8 9 10 ...
-#>  $ cas_rn      : chr  "50-00-0" "50-01-1" "50-02-2" "50-07-7" ...
-#>  $ cas_reg_no  :integer64 50000 50011 50022 50077 50146 50215 50237 50248 ... 
-#>  $ uid         : chr  NA NA NA NA ...
-#>  $ exp         : int  NA NA NA NA NA NA NA NA NA NA ...
-#>  $ chem_name   : chr  "Formaldehyde" "Guanidine, hydrochloride (1:1)" "Pregna-1,4-diene-3,20-dione, 9-fluoro-11,17,21-trihydroxy-16-methyl-, (11.beta.,16.alpha.)-" "Azirino[2',3':3,4]pyrrolo[1,2-a]indole-4,7-dione, 6-amino-8-[[(aminocarbonyl)oxy]methyl]-1,1a,2,8,8a,8b-hexahyd"| __truncated__ ...
-#>  $ def         : chr  NA NA NA NA ...
-#>  $ uvcb        : chr  NA NA NA NA ...
-#>  $ flag        : chr  NA NA NA "S" ...
-#>  $ activity    : chr  "ACTIVE" "ACTIVE" "ACTIVE" "ACTIVE" ...
-#>  $ last_created: chr  "2021-08" "2021-08" "2021-08" "2021-08" ...
+str(clp)
+#> 'data.frame':    27857 obs. of  5 variables:
+#>  $ index_no                             : chr  "001-001-00-9" "001-002-00-4" "001-003-00-X" "001-004-00-5" ...
+#>  $ international_chemical_identification: chr  "hydrogen" "aluminium lithium hydride" "sodium hydride" "calcium hydride" ...
+#>  $ ec_no                                : chr  "215-605-7" "240-877-9" "231-587-3" "232-189-2" ...
+#>  $ cas_no                               : chr  "1333-74-0" "16853-85-3" "7646-69-7" "7789-78-8" ...
+#>  $ atp                                  : int  9 9 9 9 9 9 9 9 9 9 ...
 ```
 
 ## Acknowledgement

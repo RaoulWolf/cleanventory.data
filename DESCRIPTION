@@ -16,14 +16,16 @@ LazyData: true
 LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Imports:
+Depends: 
+    R (>= 3.5.0)
 Suggests: 
     bit64,
     cleanventory,
+    covr,
     knitr,
     rmarkdown,
     textclean,
-    tools
+    tools, tinytest
 VignetteBuilder: knitr
 URL: https://github.com/RaoulWolf/cleanventory.data
 BugReports: https://github.com/RaoulWolf/cleanventory.data/issues
