@@ -25,3 +25,5 @@ Suggests:
     textclean,
     tools
 VignetteBuilder: knitr
+URL: https://github.com/RaoulWolf/cleanventory.data
+BugReports: https://github.com/RaoulWolf/cleanventory.data/issues
