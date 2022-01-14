@@ -1,0 +1,27 @@
+Package: cleanventory.data
+Type: Package
+Title: A Package for Clean Chemical Inventory Data
+Version: 0.0.1
+Authors@R: 
+    c(person(given = "Raoul",
+             family = "Wolf",
+             role = c("aut", "cre"),
+             email = "raoul.wolf@ngi.no",
+             comment = c(ORCID = "0000-0001-5971-8525")))
+Description: The cleanventory.data package provides cleaned and partially 
+    curated data sets for some of the most common chemical inventories.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+LazyDataCompression: xz
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports:
+Suggests: 
+    bit64,
+    cleanventory,
+    knitr,
+    rmarkdown,
+    textclean,
+    tools
+VignetteBuilder: knitr
