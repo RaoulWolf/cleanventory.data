@@ -4,9 +4,11 @@
 tmp <- tempdir()
 
 url <- paste0(
-  "https://www.epa.gov/system/files/other-files/2021-08/",
-  "csv-non-cbi-tsca-inventory-202108.zip"
+  "https://www.epa.gov/system/files/other-files/2022-03/",
+  "csv-non-cbi-tsca-inventory-022022.zip"
 )
+
+# https://www.epa.gov/system/files/other-files/2022-03/ms-access-non-cbi-tsca-inventory-022022.zip
 
 # Splitting the URL to retrieve the ZIP file name
 

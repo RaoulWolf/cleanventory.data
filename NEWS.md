@@ -1,3 +1,8 @@
+# cleanventory.data 0.2.1 (2022-04-26)
+
+* Included data set for `nite`.
+* Updated `tsca` data set.
+
 # cleanventory.data 0.1.0 (2022-01-19)
 
 * Minor bugfixes.
