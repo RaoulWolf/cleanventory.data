@@ -1,3 +1,7 @@
+# cleanventory.data 0.2.2 (2022-04-27)
+
+* Included data set for `nzioc`.
+
 # cleanventory.data 0.2.1 (2022-04-26)
 
 * Included data set for `nite`.

@@ -14,6 +14,6 @@ expect_equal(
 # tsca
 expect_equal(
   dim(tsca),
-  c(68191L, 11L)
+  c(68576L, 11L)
 )
 
