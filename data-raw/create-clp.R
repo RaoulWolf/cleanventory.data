@@ -45,6 +45,8 @@ file_names <- urls_split[grepl(pattern = ".xlsx", urls_split)]
 
 # Downloading the XLSX files to the temporary location
 
+options(timeout = max(300, getOption("timeout")))
+
 invisible(
   mapply(
     FUN = "download.file",

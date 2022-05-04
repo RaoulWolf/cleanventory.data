@@ -6,10 +6,10 @@
 #'
 #'   Most group standards have a requirement to ensure that every hazardous
 #'   component of your product is listed on the New Zealand Inventory of
-#'   Chemicals (NZIoC). If you have a product that contains a component that
-#'   isn't listed on the NZIoC, you will have to notify the EPA of it.
+#'   Chemicals (IoC). If you have a product that contains a component that
+#'   isn't listed on the IoC, you will have to notify the EPA of it.
 #'
-#'   You can search the NZIoC using the chemical name or CAS number.
+#'   You can search the IoC using the chemical name or CAS number.
 #'
 #'   Some non-hazardous chemicals are listed in the NZIoC. When the NZIoC was
 #'   created, we did not have hazard data on many chemicals so did not know if
@@ -25,4 +25,4 @@
 #'   \item{version}{(Character) month and year of data set publication}
 #' }
 #' @source \url{https://www.epa.govt.nz/industry-areas/hazardous-substances/guidance-for-importers-and-manufacturers/hazardous-substances-databases/}
-"nzioc"
+"ioc"

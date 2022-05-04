@@ -25,6 +25,7 @@ download.file(
 
 ec <- cleanventory::read_ec(
   path = paste(tmp, file_name, sep = "/"),
+  clean_non_ascii = TRUE,
   version = TRUE
 )
 

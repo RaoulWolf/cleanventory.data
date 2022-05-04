@@ -25,9 +25,12 @@ download.file(
   mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
 )
 
-# Read-in the NZIoC XLSX in "cleanventory" format
+# Read-in the IoC XLSX in "cleanventory" format
 
-nzioc <- cleanventory::read_nzioc(path = paste(tmp, xlsx_file, sep = "/"))
+ioc <- cleanventory::read_ioc(
+  path = paste(tmp, xlsx_file, sep = "/"),
+  version = TRUE
+)
 
 # Remove temporary file
 
@@ -35,5 +38,5 @@ file.remove(paste(tmp, xlsx_file, sep = "/"))
 
 # Export the data as RDA
 
-save(nzioc, file = "data/nzioc.rda")
-tools::resaveRdaFiles(paths = "data/nzioc.rda")
+save(ioc, file = "data/ioc.rda")
+tools::resaveRdaFiles(paths = "data/ioc.rda")

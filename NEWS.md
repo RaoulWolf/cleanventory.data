@@ -1,6 +1,11 @@
+# cleanventory.data 0.2.3 (2022-05-04)
+
+* Included data set for `ncis`.
+* Included data set for `hcis`.
+
 # cleanventory.data 0.2.2 (2022-04-27)
 
-* Included data set for `nzioc`.
+* Included data set for `ioc`.
 
 # cleanventory.data 0.2.1 (2022-04-26)
 
