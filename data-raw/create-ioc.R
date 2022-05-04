@@ -29,6 +29,7 @@ download.file(
 
 ioc <- cleanventory::read_ioc(
   path = paste(tmp, xlsx_file, sep = "/"),
+  clean_non_ascii = TRUE,
   version = TRUE
 )
 

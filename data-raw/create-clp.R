@@ -63,7 +63,9 @@ invisible(
 
 clp <- lapply(
   paste(tmp, file_names, sep = "/"),
-  FUN = cleanventory::read_clp
+  FUN = function(x) {
+    cleanventory::read_clp(x, clean_non_ascii = TRUE)
+  }
 )
 
 clp <- do.call(what = "rbind", args = c(clp, make.row.names = FALSE))

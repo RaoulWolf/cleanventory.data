@@ -1,23 +1,3 @@
-url <- paste(
-  "http://hcis.safeworkaustralia.gov.au/HazardousChemical/DownloadExcel2007",
-  "SearchBy=Name&results=30&sortBy=Name&orderBy=MR&isAdvancedSearch=false",
-  sep = "?"
-)
-
-options(timeout = max(300, getOption("timeout")))
-
-download.file(
-  url = url,
-  destfile = "../HCResults.xlsx",
-  mode = "wb"
-)
-
-path <- "../HCResults.xlsx"
-
-Hazardous Chemical Information System (HCIS)
-
-###
-
 # Setting up a temporary path and defining the URL from the official website:
 # http://hcis.safeworkaustralia.gov.au/HazardousChemical
 

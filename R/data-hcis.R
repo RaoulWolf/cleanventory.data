@@ -36,7 +36,7 @@
 #'   \item{cas_no}{(Character) Chemical Abstracts Service (CAS) registry number}
 #'   \item{chemical_name}{(Character) the chemical name}
 #'   \item{hazard_category}{(Character) the associated hazard category}
-#'   \item{picogram_codes_and_signal_words}{(Character) any associated signal words and pictogram codes}
+#'   \item{pictogram_codes_and_signal_words}{(Character) any associated signal words and pictogram codes}
 #'   \item{hazard_statement_codes}{(Character) the harmonized hazard statement codes}
 #'   \item{hazard_statements}{(Character) the harmonized hazard statements}
 #'   \item{cut_offs_specifications}{(Character) additional information on cut-offs or other specifications}

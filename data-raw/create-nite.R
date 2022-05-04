@@ -24,6 +24,7 @@ download.file(
 
 nite <- cleanventory::read_nite(
   path = paste(tmp, xlsx_file, sep = "/"),
+  clean_non_ascii = TRUE,
   version = "March 2022"
 )
 
