@@ -20,7 +20,7 @@ download.file(
   mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
 )
 
-# Read-in the IoC XLSX in "cleanventory" format
+# Read-in the HCIS XLSX in "cleanventory" format
 
 hcis <- cleanventory::read_hcis(
   path = paste(tmp, "HCResults.xlsx", sep = "/"),
