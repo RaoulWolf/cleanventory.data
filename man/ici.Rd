@@ -8,11 +8,12 @@
 A data frame with 39,460 rows and 6 variables:
 \describe{
 \item{cr_no}{(Character) Chemical Abstracts Service (CAS) registry number}
-\item{cas_no}{(Character) the chemical name}
-\item{cas_name}{(Character) the associated hazard category}
-\item{aicis_approved_chemical_name_aacn}{(Character) any associated signal words and pictogram codes}
-\item{molecular_formula}{(Character) the harmonized hazard statement codes}
-\item{version}{(Character) the harmonized hazard statements}
+\item{cas_no}{(Character) Chemical Abstracts Service (CAS) registry number}
+\item{cas_name}{(Character) the CAS name}
+\item{aicis_approved_chemical_name_aacn}{(Character) the AICIS approved
+chemical name (AACN)}
+\item{molecular_formula}{(Character) the molecular formula}
+\item{version}{(Character) the version of the data set}
 }
 }
 \source{
