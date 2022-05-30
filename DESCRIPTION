@@ -1,7 +1,7 @@
 Package: cleanventory.data
 Type: Package
 Title: A Package for Clean Chemical Inventory Data
-Version: 0.2.3
+Version: 0.2.4
 Authors@R: 
     c(person(given = "Raoul",
              family = "Wolf",
@@ -15,7 +15,7 @@ Encoding: UTF-8
 LazyData: true
 LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 Depends: 
     R (>= 3.5.0)
 Suggests: 

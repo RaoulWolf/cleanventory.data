@@ -14,6 +14,8 @@ url_split <- unlist(strsplit(url, split = "/"))
 
 file_name <- url_split[grepl(pattern = ".csv", url_split)]
 
+options(timeout = max(300, getOption("timeout")))
+
 download.file(
   url = url,
   destfile = paste(tmp, file_name, sep = "/"),

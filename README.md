@@ -25,7 +25,7 @@ We suggest the following packages/functionalities in addition:
 to correctly handle the `tsca$cas_reg_no` column (kept as `double` for
 compatibility).
 
-As of 2022-05-04, the following inventories are included:
+As of 2022-05-30, the following inventories are included:
 
 | Chemical Inventory | Name   | Version(s)            | URL                                                                                 |
 |:-------------------|:-------|:----------------------|:------------------------------------------------------------------------------------|
@@ -34,8 +34,9 @@ As of 2022-05-04, the following inventories are included:
 | ECHA EC            | `ec`   | *Unknown*             | <https://echa.europa.eu/information-on-chemicals/ec-inventory>                      |
 | Japan NITE         | `nite` | March 2022            | <https://www.nite.go.jp/chem/english/ghs/ghs_download.html>                         |
 | New Zealand IoC    | `ioc`  | December 2021         | <https://www.epa.govt.nz/database-search/new-zealand-inventory-of-chemicals-nzioc/> |
-| South Korea NCIS   | `ncis` | 4 May 2022            | <https://www.epa.govt.nz/database-search/new-zealand-inventory-of-chemicals-nzioc/> |
-| Australia HSIC     | `hcis` | *Unknown*             | <https://www.epa.govt.nz/database-search/new-zealand-inventory-of-chemicals-nzioc/> |
+| South Korea NCIS   | `ncis` | 4 May 2022            | <https://ncis.nier.go.kr/en/mttrList.do>                                            |
+| Australia HSIC     | `hcis` | *Unknown*             | <http://hcis.safeworkaustralia.gov.au/HazardousChemical>                            |
+| Australia ICI      | `ici`  | 10 February 2022      | <https://www.industrialchemicals.gov.au/search-inventory>                           |
 
 ## Installation
 
