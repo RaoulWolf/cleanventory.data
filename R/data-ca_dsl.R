@@ -1,0 +1,20 @@
+#' @title The Canada Domestic Substance List
+#' @description Note that the .xlsx file need to be manually downloaded
+#'   from the official website:
+#'   https://pollution-waste.canada.ca/substances-search/Substance?lang=en
+#'
+#' @format A data frame with 28,503 rows and 3 variables:
+#' \describe{
+#'   \item{substance_identifier}{(Character) The substance identifier: mostly
+#'     the Chemical Abstract Service (CAS) Registry Number (e.g. 50-00-0), but
+#'     also Environmental and Climate Change Canada Confidential Accession
+#'     Number (e.g. 10000-1), National Pollutant Release Inventory Substance
+#'     Identifier (e.g. NA - 12), Enzyme Commission Number (e.g. 1.1.1.1), or
+#'     American Type Culture Collection (ATCC) Number (e.g. ATCC 11866)}
+#'   \item{substance_name}{(Character) The substance name}
+#'   \item{recent_publications}{(Character) Recent official publications of
+#'     the substance entry}
+#'   \item{date_published}{(Date) The date on which the substance first was
+#'     included in the DSL}
+#' }
+"ca_dsl"

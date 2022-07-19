@@ -1,19 +1,19 @@
 
 # clp
 expect_equal(
-  dim(clp),
-  c(27857L, 5L)
+  dim(eu_clp_17),
+  c(4702L, 4L)
 )
 
 # ec
 expect_equal(
-  dim(ec),
-  c(106213L, 9L)
+  dim(eu_eci),
+  c(106213L, 8L)
 )
 
 # tsca
 expect_equal(
-  dim(tsca),
-  c(68576L, 11L)
+  dim(cleanventory.data::us_tsca),
+  c(68576L, 10L)
 )
 
