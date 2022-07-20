@@ -1,8 +1,6 @@
 # Setting up a temporary path and defining the URLs from the official website:
 # https://echa.europa.eu/en/information-on-chemicals/annex-vi-to-clp
 
-tmp <- tempdir()
-
 urls <- c(
   paste0(
     "https://echa.europa.eu/documents/10162/17218/",
@@ -51,7 +49,7 @@ invisible(
   mapply(
     FUN = "download.file",
     url = urls,
-    destfile = paste(tmp, file_names, sep = "/"),
+    destfile = paste("data-raw", file_names, sep = "/"),
     MoreArgs = list(
       quiet = TRUE,
       mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
@@ -62,7 +60,7 @@ invisible(
 # Read-in the CLP XLSX in "cleanventory" format
 
 eu_clp <- lapply(
-  paste(tmp, file_names, sep = "/"),
+  paste("data-raw", file_names, sep = "/"),
   FUN = function(x) {
     cleanventory::read_eu_clp(x, clean_non_ascii = TRUE)
   }
@@ -74,10 +72,6 @@ eu_clp_13 <- eu_clp[[3]]
 eu_clp_14 <- eu_clp[[4]]
 eu_clp_15 <- eu_clp[[5]]
 eu_clp_17 <- eu_clp[[6]]
-
-# Remove temporary files
-
-invisible(file.remove(paste(tmp, file_names, sep = "/")))
 
 # Export the data as RDA
 

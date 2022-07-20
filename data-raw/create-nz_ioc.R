@@ -2,8 +2,6 @@
 # https://www.epa.govt.nz/industry-areas/hazardous-substances/
 #   guidance-for-importers-and-manufacturers/hazardous-substances-databases/
 
-tmp <- tempdir()
-
 url <- paste(
   "https://www.epa.govt.nz/assets/Uploads/Documents/Hazardous-Substances",
   "Guidance/NZIOC_Full_Spreadsheet_December_2021.xlsx",
@@ -20,7 +18,7 @@ xlsx_file <- url_split[grepl(pattern = ".xlsx", url_split)]
 
 download.file(
   url = url,
-  destfile = paste(tmp, xlsx_file, sep = "/"),
+  destfile = paste("data-raw", xlsx_file, sep = "/"),
   quiet = TRUE,
   mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
 )
@@ -31,10 +29,6 @@ nz_ioc <- cleanventory::read_nz_ioc(
   path = paste(tmp, xlsx_file, sep = "/"),
   clean_non_ascii = TRUE
 )
-
-# Remove temporary file
-
-file.remove(paste(tmp, xlsx_file, sep = "/"))
 
 # Export the data as RDA
 

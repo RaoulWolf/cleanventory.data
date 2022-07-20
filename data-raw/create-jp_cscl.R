@@ -4,23 +4,17 @@
 # Read-in the CSCL TSV files in "cleanventory" format
 
 jp_cscl_ecs <- cleanventory::read_jp_cscl(
-  path = "../Japan CSCL_ Existing Chemical Substances.tsv",
+  path = paste("data-raw", "Japan CSCL_ Existing Chemical Substances.tsv", sep = "/"),
   clean_non_ascii = TRUE
 )
 
 jp_cscl_nacs_1 <- cleanventory::read_jp_cscl(
-  path = paste(
-    "../Japan CSCL_ Newly Announced Chemical Substances",
-    "(notified before March 31, 2011).tsv"
-  ),
+  path = paste("data-raw", "Japan CSCL_ Newly Announced Chemical Substances (notified before March 31, 2011).tsv", sep = "/"),
   clean_non_ascii = TRUE
 )
 
 jp_cscl_nacs_2 <- cleanventory::read_jp_cscl(
-  path = paste(
-    "../Japan CSCL_ Newly Announced Chemical Substances",
-    "(notified on or after April 1, 2011).tsv"
-  ),
+  path = paste("data-raw", "Japan CSCL_ Newly Announced Chemical Substances (notified on or after April 1, 2011).tsv", sep = "/"),
   clean_non_ascii = TRUE
 )
 

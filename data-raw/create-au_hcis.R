@@ -15,7 +15,7 @@ options(timeout = max(300, getOption("timeout")))
 
 download.file(
   url = url,
-  destfile = paste(tmp, "HCResults.xlsx", sep = "/"),
+  destfile = paste("data-raw", "HCResults.xlsx", sep = "/"),
   quiet = TRUE,
   mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
 )
@@ -23,13 +23,9 @@ download.file(
 # Read-in the HCIS XLSX in "cleanventory" format
 
 au_hcis <- cleanventory::read_au_hcis(
-  path = paste(tmp, "HCResults.xlsx", sep = "/"),
+  path = paste("data-raw", "HCResults.xlsx", sep = "/"),
   clean_non_ascii = TRUE
 )
-
-# Remove temporary file
-
-file.remove(paste(tmp, "HCResults.xlsx", sep = "/"))
 
 # Export the data as RDA
 

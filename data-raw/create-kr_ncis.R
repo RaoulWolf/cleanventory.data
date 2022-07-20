@@ -6,7 +6,7 @@ path <- "../Chemical+Search_20220503055738.xlsx"
 # Read-in the NCIS XLSX in "cleanventory" format
 
 kr_ncis <- cleanventory::read_kr_ncis(
-  path = "../Chemical+Search_20220503055738.xlsx",
+  path = paste("data-raw", "Chemical+Search_20220503055738.xlsx", sep = "/"),
   clean_non_ascii = TRUE
 )
 

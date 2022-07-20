@@ -4,7 +4,7 @@
 # Read-in the DSL .xlsx file in "cleanventory" format
 
 ca_dsl <- cleanventory::read_ca_dsl(
-  path = "../Domestic Substances List (DSL).xlsx",
+  path = paste("data-raw", "Domestic Substances List (DSL).xlsx", sep = "/"),
   clean_non_ascii = TRUE
 )
 

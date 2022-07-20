@@ -1,8 +1,6 @@
 # Setting up a temporary path and defining the URL from the official website:
 # https://www.nite.go.jp/chem/english/ghs/ghs_download.html
 
-tmp <- tempdir()
-
 url <- "https://www.nite.go.jp/chem/english/ghs/files/list_all_e.xlsx"
 
 # Splitting the URL to retrieve the XLSX file name
@@ -15,7 +13,7 @@ xlsx_file <- url_split[grepl(pattern = ".xlsx", url_split)]
 
 download.file(
   url = url,
-  destfile = paste(tmp, xlsx_file, sep = "/"),
+  destfile = paste("data-raw", xlsx_file, sep = "/"),
   quiet = TRUE,
   mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
 )
@@ -26,10 +24,6 @@ jp_nite <- cleanventory::read_jp_nite(
   path = paste(tmp, xlsx_file, sep = "/"),
   clean_non_ascii = TRUE
 )
-
-# Remove temporary file
-
-file.remove(paste(tmp, xlsx_file, sep = "/"))
 
 # Export the data as RDA
 

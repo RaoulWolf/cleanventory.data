@@ -1,15 +1,13 @@
 # Setting up a temporary path and defining the URL from the official websites:
 # https://chemical.emb.gov.ph/?page_id=138
 
-tmp <- tempdir()
-
 url <- "http://chemical.emb.gov.ph/wp-content/uploads/2020/07/PICCS.2017.pdf"
 
 # Downloading the PDFs to the temporary location
 
 download.file(
   url = url,
-  destfile = paste(tmp, "PICCS.2017.pdf", sep = "/"),
+  destfile = paste("data-raw", "PICCS.2017.pdf", sep = "/"),
   quiet = TRUE,
   mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
 )
@@ -17,13 +15,9 @@ download.file(
 # Read-in the TCSI PDFs in "cleanventory" format
 
 ph_iccs <- cleanventory::read_ph_iccs(
-  path = paste(tmp, "PICCS.2017.pdf", sep = "/"),
+  path = paste("data-raw", "PICCS.2017.pdf", sep = "/"),
   clean_non_ascii = TRUE
 )
-
-# Remove temporary file
-
-invisible(file.remove(paste(tmp, "PICCS.2017.pdf", sep = "/")))
 
 # Export the data as RDA
 
@@ -33,6 +27,24 @@ tools::resaveRdaFiles(paths = "data/ph_iccs.rda")
 ## The two PDF files for the EMB MC 7 and 8 are unfortunately terribly
 ## mal-formatted for fully automated integration. Luckily the data sets are
 ## relatively small, so here is a literal copy-paste from the PDF files.
+
+url_1 <- "https://chemical.emb.gov.ph/wp-content/uploads/2020/05/EMB-MC-2020-007.pdf"
+
+url_2 <- "https://chemical.emb.gov.ph/wp-content/uploads/2021/05/EMB-MC-2021-08-2021PICCS.pdf"
+
+download.file(
+  url = url_1,
+  destfile = paste("data-raw", "EMB-MC-2020-007.pdf", sep = "/"),
+  quiet = TRUE,
+  mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
+)
+
+download.file(
+  url = url_2,
+  destfile = paste("data-raw", "EMB-MC-2021-08-2021PICCS.pdf", sep = "/"),
+  quiet = TRUE,
+  mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
+)
 
 ph_emb_mc_07 <- data.frame(
   no = 1:31,

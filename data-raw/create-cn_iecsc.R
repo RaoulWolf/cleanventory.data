@@ -5,7 +5,7 @@
 # Read-in the IECSC in "cleanventory" format
 
 cn_iecsc <- cleanventory::read_cn_iecsc(
-  path = "../__2013__.pdf"
+  path = paste("data-raw", "__2013__.pdf", sep = "/")
 )
 
 save(cn_iecsc, file = "data/cn_iecsc.rda")

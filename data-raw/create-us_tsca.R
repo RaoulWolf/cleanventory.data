@@ -1,8 +1,6 @@
 # Setting up a temporary path and defining the URL from the official website:
 # https://www.epa.gov/tsca-inventory/how-access-tsca-inventory
 
-tmp <- tempdir()
-
 url <- paste0(
   "https://www.epa.gov/system/files/other-files/2022-03/",
   "csv-non-cbi-tsca-inventory-022022.zip"
@@ -18,7 +16,7 @@ zip_file <- url_split[grepl(pattern = ".zip", url_split)]
 
 download.file(
   url = url,
-  destfile = paste(tmp, zip_file, sep = "/"),
+  destfile = paste("data-raw", zip_file, sep = "/"),
   quiet = TRUE,
   mode = ifelse(.Platform$OS.type == "windows", "wb", "w")
 )
@@ -26,7 +24,7 @@ download.file(
 # Identify the TSCA CSV file name
 
 zip_list <- unzip(
-  zipfile = paste(tmp, zip_file, sep = "/"),
+  zipfile = paste("data-raw", zip_file, sep = "/"),
   list = TRUE
 )
 
@@ -35,24 +33,20 @@ file_name <- zip_list$Name[grepl(pattern = "TSCA", zip_list$Name)]
 # Unzipping the TSCA CSV from the ZIP file
 
 unzip(
-  zipfile = paste(tmp, zip_file, sep = "/"),
+  zipfile = paste("data-raw", zip_file, sep = "/"),
   files = file_name,
-  exdir = tmp
+  exdir = "data-raw"
 )
 
 # Read-in the TSCA CSV in "cleanventory" format
 
 us_tsca <- cleanventory::read_us_tsca(
-  path = paste(tmp, file_name, sep = "/")
+  path = paste("data-raw", file_name, sep = "/")
 )
 
 # Remove temporary files
 
-invisible(
-  file.remove(
-    c(paste(tmp, zip_file, sep = "/"), paste(tmp, file_name, sep = "/"))
-  )
-)
+invisible(file.remove(paste("data-raw", zip_file, sep = "/")))
 
 # Export the data as RDA
 
