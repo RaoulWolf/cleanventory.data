@@ -12,7 +12,8 @@ A data frame with 7,806 rows and 5 variables:
 \item{chrip_id}{(Character) The CHemical Risk Information Platform (CHRIP)
 ID}
 \item{cas_rn}{(Character) Chemical Abstracts Service (CAS) registry number}
-\item{cas_identity}{(Character) Additional information about the substance}
+\item{cas_identity}{(Integer) Additional information about the substance,
+see Description for details}
 \item{chemical_substance_name}{(Character) The provided name for the
 substance}
 }
@@ -37,5 +38,18 @@ Chemical Substances, Monitoring Chemical Substances and Class I/II
 Specified Chemical Substances). If a substance corresponds to the "Newly
 Announced Chemical Substances (notified by March 31, 2011)", the following
 items are displayed.
+
+About cas_identity:
+\itemize{
+\item 1: The substance which matches the substance indicated by MITI number or
+cabinet order number when a certain condition is fulfilled.
+(The condition is listed in the remarks column of the search result, so
+be sure to check it)
+\item 2: The substance which is regarded as CSCL: Class I Specified Chemical
+Substances, Class II Specified Chemical Substances, Monitoring Chemical
+Substances, Priority Assessment Chemical Substances by the operation
+notification "Implementation of the Act on the Evaluation of Chemical
+Substances and Regulation of Their Manufacture, etc. 3-1".
+}
 }
 \keyword{datasets}
