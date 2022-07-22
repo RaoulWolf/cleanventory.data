@@ -21,7 +21,7 @@ download.file(
 # Read-in the NITE XLSX in "cleanventory" format
 
 jp_nite <- cleanventory::read_jp_nite(
-  path = paste(tmp, xlsx_file, sep = "/"),
+  path = paste("data-raw", xlsx_file, sep = "/"),
   clean_non_ascii = TRUE
 )
 

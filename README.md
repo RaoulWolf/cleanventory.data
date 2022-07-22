@@ -18,6 +18,11 @@ The goal of cleanventory.data is to provide easy access to the data sets
 as created by the
 [cleanventory](https://github.com/RaoulWolf/cleanventory) package.
 
+cleanventory.data aims to have correctly identified all missing values
+in the data sets, all CAS Registry Numbers validated (when present) and
+additionally all special characters are transformed into ASCII
+characters.
+
 As such, it comes with no additional dependencies.
 
 We suggest the following packages/functionalities in addition:
@@ -25,7 +30,7 @@ We suggest the following packages/functionalities in addition:
 to correctly handle the `us_tsca$cas_reg_no` column (kept as `double`
 for compatibility).
 
-As of 2022-07-19, the following inventories are included:
+As of 2022-07-22, the following inventories are included:
 
 | Chemical Inventory | Name                                                                                        | Version(s)                                   | URL                                                                                                                                                  |
 |:-------------------|:--------------------------------------------------------------------------------------------|:---------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|

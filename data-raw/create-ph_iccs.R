@@ -93,6 +93,15 @@ ph_emb_mc_07 <- data.frame(
   stringsAsFactors = FALSE
 )
 
+ph_emb_mc_07 <- transform(
+  ph_emb_mc_07,
+  cas_registry_no = ifelse(
+    test = cleanventory:::.check_cas(cas_registry_no),
+    yes = cas_registry_no,
+    no = NA_character_
+  )
+)
+
 save(ph_emb_mc_07, file = "data/ph_emb_mc_07.rda")
 tools::resaveRdaFiles(paths = "data/ph_emb_mc_07.rda")
 
@@ -167,6 +176,15 @@ ph_emb_mc_08 <- data.frame(
     "Oils, Evodia rutaercarpa"
   ),
   stringsAsFactors = FALSE
+)
+
+ph_emb_mc_08 <- transform(
+  ph_emb_mc_08,
+  cas_registry_no = ifelse(
+    test = cleanventory:::.check_cas(cas_registry_no),
+    yes = cas_registry_no,
+    no = NA_character_
+  )
 )
 
 save(ph_emb_mc_08, file = "data/ph_emb_mc_08.rda")

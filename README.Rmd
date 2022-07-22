@@ -27,6 +27,11 @@ The goal of cleanventory.data is to provide easy access to the data sets as
 created by the [cleanventory](https://github.com/RaoulWolf/cleanventory) 
 package. 
 
+
+cleanventory.data aims to have correctly identified all missing values in the 
+data sets, all CAS Registry Numbers validated (when present) and additionally 
+all special characters are transformed into ASCII characters. 
+
 As such, it comes with no additional dependencies.
 
 We suggest the following packages/functionalities in addition: 

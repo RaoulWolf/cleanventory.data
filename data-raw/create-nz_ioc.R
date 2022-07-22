@@ -26,7 +26,7 @@ download.file(
 # Read-in the IoC XLSX in "cleanventory" format
 
 nz_ioc <- cleanventory::read_nz_ioc(
-  path = paste(tmp, xlsx_file, sep = "/"),
+  path = paste("data-raw", xlsx_file, sep = "/"),
   clean_non_ascii = TRUE
 )
 
