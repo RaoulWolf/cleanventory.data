@@ -56,9 +56,9 @@ As of `r Sys.Date()`, the following inventories are included:
 | Japan CSCL         | `jp_cscl_ecs`</br>`jp_cscl_nacs_1`</br>`jp_cscl_nacs_2` | 31 May 2022</br>31 May 2022</br>1 April 2022 | https://www.nite.go.jp/en/chem/chrip/chrip_search/sltLst|
 | Canada DSL         | `ca_dsl`   | 14 June 2022          | https://pollution-waste.canada.ca/substances-search/Substance?lang=en |
 | China IECSC        | `cn_iecsc` | 2013                  | https://www.mee.gov.cn/gkml/hbb/bgg/201301/t20130131_245810.htm |
-| Nordics SPIN       | `read_xn_spin()`  | 2000                  | http://www.spin2000.net/spinmyphp/ |
-| US CDR             | `read_us_cdr()`   | 2016</br>2020         | https://www.epa.gov/chemical-data-reporting |
-| Malaysia CIMS      | `read_my_cims()`  | 2017                  | https://cims.dosh.gov.my/ |
+| Nordics SPIN       | `xn_spin`  | 2000                  | http://www.spin2000.net/spinmyphp/ |
+| US CDR             | `us_cdr_2016_ccu`</br>`us_cdr_2016_iu`</br>`us_cdr_2016_mi`</br>`us_cdr_2016_napv`</br>`us_cdr_2020_ccu`</br>`us_cdr_2020_ipu`</br>`us_cdr_2020_mii`</br>`us_cdr_2020_napv`   | 2016</br>2020         | https://www.epa.gov/chemical-data-reporting |
+| Malaysia CIMS      | `my_cims`  | 2017                  | https://cims.dosh.gov.my/ |
 
 
 ## Installation
