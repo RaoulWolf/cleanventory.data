@@ -1,3 +1,10 @@
+# cleanventory.data 0.3.2 (2022-09-14)
+
+* Added the following inventories: Malaysia (`my_cims`), United States 
+  (`us_cdr_2016_ccu`, `us_cdr_2016_iu`, `us_cdr_2016_mi`, `us_cdr_2016_napv`, 
+  `us_cdr_2020_ccu`, `us_cdr_2020_ipu`, `us_cdr_2020_mii`, `us_cdr_2020_napv`), 
+  and Nordic countries (`xn_spin`). 
+
 # cleanventory.data 0.3.1 (2022-07-19)
 
 * All data sets now have a two-letter code indicating the country/region of 
